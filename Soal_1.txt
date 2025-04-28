@@ -1,0 +1,64 @@
+Seorang petani ingin sistem AI yang bisa membantu menentukan jenis hama tanaman berdasarkan gejala seperti
+• Daun menguning
+• Terdapat bercak hitam
+• Daun berlubang
+• Tanaman kayu
+
+Jawaban :
+
+1. Aturan Logika
+   Kita punya 4 gejala:
+	1. G1: Daun menguning
+	2. G2: Terdapat bercak hitam
+	3. G3: Daun berlubang
+	4. G4: Tanaman kayu
+
+   Aturan (Rules):
+	1. Rule 1: Jika daun menguning dan terdapat bercak hitam → maka kemungkinan besar terkena Hama A.
+	2. Rule 2: Jika daun berlubang → maka kemungkinan besar terkena Hama B.
+	3. Rule 3: Jika tanaman kayu dan terdapat bercak hitam → maka kemungkinan besar terkena Hama C.
+	4. Rule 4: Jika daun menguning dan daun berlubang → maka kemungkinan besar terkena Hama D.
+
+2. Logika Proposisional
+   Definisi proposisi:
+	a. P1: daun menguning
+	b. P2: terdapat bercak hitam
+	c. P3: daun berlubang
+	d. P4: tanaman kayu
+   Definisi hama:
+	• HamaA: terkena Hama A
+	• HamaB: terkena Hama B
+	• HamaC: terkena Hama C
+	• HamaD: terkena Hama D
+   Logika aturan:
+	a. (P1 ∧ P2) → HamaA
+	b. (P3) → HamaB
+	c. (P4 ∧ P2) → HamaC
+	d. (P1 ∧ P3) → HamaD
+
+3. Pseudocode
+
+Input: Gejala yang dialami tanaman
+
+If daun menguning AND bercak hitam:
+    Hama = Hama A
+Else if daun berlubang:
+    Hama = Hama B
+Else if tanaman kayu AND bercak hitam:
+    Hama = Hama C
+Else if daun menguning AND daun berlubang:
+    Hama = Hama D
+Else:
+    Hama = Tidak diketahui
+Output: Jenis Hama
+
+4. Penjelasan Alur Inferensi
+	1. Input: Petani memasukkan gejala-gejala yang terlihat pada tanaman. 
+	   (Misal: daun menguning dan bercak hitam)
+	2. Proses Inferensi:
+	   Sistem memeriksa aturan yang ada:
+		• Apakah daun menguning dan bercak hitam? → Ya → maka keluar Hama A
+		• Kalau tidak cocok, sistem cek aturan lain satu per satu.
+
+	3. Output:
+	   Sistem menampilkan hasil identifikasi jenis hama ke petani, misal: "Tanaman terkena Hama A".
