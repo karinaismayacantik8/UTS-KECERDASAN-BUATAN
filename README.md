@@ -34,6 +34,7 @@ Penjelasan File
    - Berisi penjelasan konsep dasar sistem pakar, logika inferensi, serta prinsip kecerdasan buatan yang digunakan dalam pengerjaan soal.
 
 🌾 Ringkasan Sistem Pakar Hama Tanaman (Soal 1)
+
 Sistem pakar dirancang untuk mengidentifikasi kemungkinan jenis hama berdasarkan kombinasi gejala berikut:
 
 - Daun menguning
